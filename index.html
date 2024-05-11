@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="icon" href="imagenes/LOGO.png" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IACode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        body, html{
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            scroll-behavior: smooth;
+        }
+        #barra{
+            width: 100%;
+            height: 70px;
+            background-color: rgb(2, 2, 85);
+            position: absolute;
+            top: 0px; left: 0px;
+            z-index: 2;
+        }
+        #barra2{
+            width: 100%;
+            height: 70px;
+            background: transparent;
+        
+            top: 0px; left: 0px;
+            z-index: 2;
+        }
+        #seccion1{
+            display: flex;
+            padding-left: 20px;
+        }
+        .izquierda{
+            position: relative;
+            z-index: 1;
+            left: 0px;
+            width: 50%;
+            height: 500px;
+           padding-left: 20px;
+           color: #3B4350;
+          
+           
+        }
+        .binario{
+            animation: girarbinario 40s infinite linear ;
+        }
+        @keyframes girarbinario {
+            0%   {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        
+        .boton12{
+            width: 290px;
+            height: 35px;
+            margin-top: 25px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            color:rgb(2, 2, 85) ;
+            transition-duration: 0.5s;
+            border: solid rgb(2, 2, 85) 1px;
+            
+        }
+        .boton12:hover{
+            background-color: rgb(2, 2, 85);
+            border-radius: 50px;
+            color:rgb(255, 255, 255) ;
+            transition-duration: 0.5s;
+            border: solid rgb(2, 2, 85) 1px;
+            
+        }
+        
+       
+        .card{
+            margin-left: 5%;
+        }
+        #desarrolla{
+            margin-top: 5%;
+            margin-left: 25%;
+            width: 50%;
+            height: 500px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+        }
+        @keyframes show {
+            from{
+                opacity: 0;
+                scale: 25%;
+            }
+            to{
+                opacity: 1;
+                scale: 100%;
+            }
+            
+        }
+        #desarrolla{
+            view-timeline: --image;
+            view-timeline-axis: block;
+            animation-timeline: --image;
+            animation-name: show;
+            animation-range: entry 25% cover 50%;
+            animation-fill-mode: both;
+        }
+
+        .btn-primary{
+            background-color: rgb(2, 2, 85);
+            border: none;
+            width: 100%;
+        }
+        .btn-primary:hover{
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            color:rgb(2, 2, 85) ;
+            border: solid rgb(2, 2, 85) 1px;
+            transition: 0.7s;
+            
+        }
+        .iz{
+            width: 50%;
+        }
+        .der{
+            width: 50px;
+            
+        }
+        .l{
+            margin-top: 20px;
+            font-weight: 500;
+        }   
+        .boton1{
+            border-radius: 50px;
+            width: 290px;
+            height: 50px;
+            margin: auto;
+            border: 0.5px solid rgb(0, 0, 0);
+            color: white;
+            background-color: rgb(2, 2, 85);
+            cursor: pointer;
+        }
+        .boton1:hover{
+            border-radius: 50px;
+            width: 290px;
+            height: 50px;
+            margin: auto;
+            border: 0.5px solid rgb(0, 0, 0);
+            color: rgb(2, 2, 85);
+            background-color: white;
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            color: white;
+            padding: 50px;display: flex;
+        }
+        #nbn{
+            width: 101%;
+            height: 286px;
+            position: absolute;
+            margin-top: -302px;
+            margin-left: -17px;
+            background-color: rgb(7, 30, 145);
+            filter: opacity(0);
+            cursor: pointer;
+        }
+        #nbn:hover{
+            filter: opacity(0.5);
+
+        }
+         </style>
+    <script>
+        function sumar(){
+        
+            window.scrollTo(0, 1400);
+    }
+     
+      
+    </script>
+</head>
+<body>
+<nav>
+<div id="barra">
+    <img src="imagenes/navlogo.png" style="margin-left: 70px; scale: 2;" width="48px" height="70px" alt="">
+</div>
+<div id="barra2">
+</div>
+</nav>
+
+<section id="seccion1">
+<div class="izquierda">
+    <br>    <br>
+    <div style="display:flex; padding-left: 8.1%; scale: 1.2;">
+    <h1 >IA</h1><h1 style="color:rgb(65, 65, 151);" >Code</h1>
+    </div>
+    <p style="text-align: justify; font-weight: 500;"> IAcode es una plataforma innovadora que aprovecha el potencial de la inteligencia artificial para enseñar programación de manera flexible y eficiente. </p>
+   <p style="font-weight: 500;">Nuestros cursos no tienen horarios fijos y están completamente en español, dirigidos a personas de todas las edades y niveles de experiencia. IAcode ofrece una forma conveniente de aprender a programar en cualquier momento y lugar, optimizando así el proceso de aprendizaje.</p>
+    <div style="margin-top: -20px;"><br><br><b style="font-weight: 600;">Características de IA</b><b style="color: rgb(65, 65, 151);;">Code</b> <br><br></div>
+   <div style="margin-top: -20px;"><li type="disc" style="font-weight: 500;">ofrece cursos sobre tecnología impartidos por Inteligencia Artificial.</li><br>
+    <li type="disc" style="font-weight: 500;">IACode tiene variedad de cursos y cada uno con el mismo valor monetario.</li><br>
+    <li type="disc" style="font-weight: 500;">Los cursos son 100% en español.</li><br>
+    <li type="disc" style="font-weight: 500;">Flexibilidad en cada uno de los cursos.</li></div> <br></div>
+
+<div class="derecha">
+    <br><br>
+    <img class="binario" src="imagenes/binario.png" style="margin-left: 30%;" width="500px" alt="">
+</div><!--Boton de ver los cursos-->
+</section><br><br>
+<div style="text-align: center;">
+ 
+<button class="boton1" name="scroll" onclick="sumar()" id="showScroll">Ver los cursos</button>
+</div><!--Fin Boton de ver los cursos-->
+
+
+<br><br><br><br>
+
+
+
+
+<!------------Sección de desarrolla tus habilidades------------->
+    <div id="desarrolla">
+        <div class="iz">
+            <div style="scale: 2; margin-top: -75px;margin-left: 33.3%;"><br><br><b>IA</b><b style="color: rgb(65, 65, 151);;">Code</b> <img src="imagenes/logoazul.png" style="width: 30px; padding-bottom: 13px;margin-left: -5px;" alt=""><br></div>
+
+            <div style="display: flex;"><b style="font-size: 30px; margin-top: 20px;">Desarrolla las habilidades de programar y de creación de software gracias a IACode</b></div>
+            <br><div style="margin-top: -20px;">
+                <li class="l" type="disc">Acceso ilimitado a los mejores cursos en cualquier momento y lugar</li>
+                <li class="l" type="disc">IACode tiene cursos 100% en español.</li>
+                <li class="l" type="disc">Certificaciones de cada uno de los cursos.</li></div> 
+                <button class="boton12" name="scroll">Ver los cursos</button>
+
+        </div>
+ <!-------------FIN izquierda-------------------------------->
+
+      
+<!-------------FIN DErecha-------------------------------->
+<div class="der">
+    <img src="imagenes/persona azul programando.jpeg" width="450px">
+            </div>
+        </div><br><br>
+<!-------------FIN DE LA SECCION-------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+<!---------------Inicio seccion con cards------------------------------------>
+<div style="display: flex;">
+<!-------Primera card------>
+
+<div class="card" style="width: 18rem;">
+    
+    <img src="imagenes/javazul.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <a href="Ajava.html"><div id="nbn"></div></a>
+   
+      <h5 class="card-title">Java</h5>
+      <p class="card-text">Es una plataforma fiable en la que se crean muchos servicios y aplicaciones.</p>
+      <br><br><br><a href="Ajava.html" class="btn btn-primary">Adquirir</a>
+    </div>
+  </div>
+<!-------Primera card------>
+
+
+<!-------Primera card------>
+<div class="card" style="width: 18rem;">
+    <img src="imagenes/php.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <a href="Aphp.html"> <div id="nbn"></div></a>
+
+      <h5 class="card-title">PHP</h5>
+      <p class="card-text">PHP está enfocado principalmente a la programación de scripts del lado del servidor.</p>
+      <br><br><br><a href="Aphp.html" class="btn btn-primary">Adquirir</a>
+    </div>
+  </div>
+<!-------Primera card------>
+
+<!-------Primera card------>
+<div class="card" style="width: 18rem;">
+    <img src="imagenes/c++.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <a href="Ac++.html"><div id="nbn"></div></a>
+
+      <h5 class="card-title">C++</h5>
+      <p class="card-text">C++ puede crear casi cualquier tipo de programa: juegos, controladores de dispositivos, HPC, nube, escritorio, incrustado, aplicaciones móviles, etc.</p>
+     <br> <a href="Ac++.html" class="btn btn-primary">Adquirir</a>
+    </div>
+  </div>
+<!-------Primera card------>
+
+<!-------Primera card------>
+<div class="card" style="width: 18rem;">
+    <img src="imagenes/python.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+       <a href="Apython.html"> <div id="nbn"></div></a>
+
+      <h5 class="card-title">Python</h5>
+      <p class="card-text">Python es un lenguaje de programación ampliamente utilizado en las aplicaciones web, el desarrollo de software, la ciencia de datos y el machine learning</p>
+      <a href="Apython.html" class="btn btn-primary">Adquirir</a>
+    </div>
+  </div>
+<!-------Primera card------>
+<br><br>
+</div>
+<!------------------Fin de la seccion de cards---------------------------------------------->
+
+<br><br>
+
+<!---------------Inicio seccion con cards 2------------------------------------>
+<div style="display: flex;">
+    <!-------Primera card------>
+    <div class="card" style="width: 18rem;">
+        <img src="imagenes/javascript.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+           <a href="Ajavascript.html"> <div id="nbn"></div></a>
+
+          <h5 class="card-title">JavaScript</h5>
+          <p class="card-text">JavaScript es un lenguaje de programación que los desarrolladores utilizan para hacer páginas web interactivas.</p>
+          <a href="Ajavascript.html" class="btn btn-primary">Adquirir</a>
+        </div>
+      </div>
+    <!-------Primera card------>
+    
+    
+    <!-------Primera card------>
+    <div class="card" style="width: 18rem;">
+        <img src="imagenes/visual.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+           <a href="Avisual.html"> <div id="nbn"></div></a>
+
+          <h5 class="card-title">Visual Basic</h5>
+          <p class="card-text">Puede usar los objetos que proporciona Visual Basic, como controles, formularios y objetos de acceso a datos.</p>
+          <a href="Avisual.html" class="btn btn-primary">Adquirir</a>
+        </div>
+      </div>
+    <!-------Primera card------>
+    
+    <!-------Primera card------>
+    <div class="card" style="width: 18rem;">
+        <img src="imagenes/ruby.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+           <a href="Aruby.html"><div id="nbn"></div></a> 
+
+          <h5 class="card-title">Ruby</h5>
+          <p class="card-text">Ruby es un lenguaje de programación muy popular que se utiliza para muchas cosas.</p>
+          <br><a href="Aruby.html" class="btn btn-primary">Adquirir</a>
+        </div>
+      </div>
+    <!-------Primera card------>
+    
+    <!-------Primera card------>
+    <div class="card" style="width: 18rem;">
+        <img src="imagenes/C.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+           <a href="AC.html"> <div id="nbn"></div></a>
+
+          <h5 class="card-title">C</h5>
+          <p class="card-text">El lenguaje C es un lenguaje de nivel medio bajo.</p><br>
+          <br><a href="AC.html" class="btn btn-primary">Adquirir</a>
+        </div>
+      </div>
+    <!-------Primera card------>
+   
+    </div>
+    <!------------------Fin de la seccion de cards 2---------------------------------------------->
+    <br> <br><br>
+
+
+
+    <br><br><br>
+
+
+<style>
+    #logros{
+        display: flex;
+
+    }
+    #letras{
+        display: flex;
+        margin-left: -10px;
+    }
+    #letras1{
+        display: flex;
+        margin-left: -10px;
+        color:rgb(65, 65, 151); 
+    }
+</style>
+<!------------Sección de Nuestros logros------------->
+    <div id="logros">
+        <div id="estudiantes">
+            <img src="imagenes/personaa programando dibujo.jpeg" style="border-radius: 50%; margin-left: 190px;" width="250px" alt="">
+        </div>
+        <div id="estudiantes">
+            <img src="imagenes/persona graduada dibujo.jpeg" style="border-radius: 50%; margin-left: 190px;" width="250px" alt="">
+        </div>
+        <div id="estudiantes">
+            <img src="imagenes/trofeo dibujo.jpeg" style="border-radius: 50%; margin-left: 190px;" width="250px" alt="">
+        </div>
+        
+    </div>
+        <div id="letras"><h1 style="margin-left: 18%;">1400</h1><h1 style="margin-left: 24%;">600</h1><h1 style="margin-left: 24%;">100%</h1></div>
+        <div id="letras1"><h1 style="margin-left: 15%;">Estudiantes</h1><h1 style="margin-left: 16%;">Graduados</h1><h1 style="margin-left: 17%;">Porcentaje</h1></div>
+        <div id="letras"><h1 style="margin-left: 16.5%;">Activos</h1><h1 style="margin-left: 19.2%;">Trabajando</h1><h1 style="margin-left: 15.5%;">de graduados</h1></div>
+
+<!-------------FIN DE LA SECCION-------------------------------->
+
+
+
+
+
+    <br><br> <br>
+    <footer>
+        <div style="display: flex; width: 100%;" > <p>&copy; 2024 IACode  </p><p style="font-size: x-small; margin-left: 50px;">|  BRUNO ANTONIO URÍAS CASTILLO 1184524    |     ESTEBAN JOSUÉ MALDONADO VELASCO 1053424    |    RUDDY GABRIEL CUYÁN LEIVA  1360324    |    DIEGO ALEJANDRO BARRIOS GÓMEZ 2009424    |   JOSE RODRIGO PEÑATE ORTIZ 1134324</p></div>
+        
+    </footer>
+</body>
+</html>
